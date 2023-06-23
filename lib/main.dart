@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'pages/Login.dart';
 import 'pages/Home.dart';
+import 'pages/Details.dart';
 
 void main() {
   runApp(GetMaterialApp(
@@ -13,6 +14,7 @@ void main() {
       //define rotas
       GetPage(name: "/Login", page: () => const Login()),
       GetPage(name: "/Home", page: () => const Home()),
+      GetPage(name: "/Details", page: () => const Details()),
     ],
   ));
 }
