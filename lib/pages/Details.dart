@@ -21,8 +21,9 @@ class Details extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
+            Container(
+              padding:
+                  const EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -30,9 +31,10 @@ class Details extends StatelessWidget {
                   Text(
                     "Capacitação de ${Get.arguments['title']}",
                     style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 23,
-                        fontWeight: FontWeight.w800),
+                      color: Colors.white,
+                      fontSize: 23,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                   SizedBox(height: 10),
                   Text(
@@ -70,8 +72,11 @@ class Details extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding:
-                    const EdgeInsets.only(top: 30.0, left: 40.0, right: 40.0),
+                padding: const EdgeInsets.only(
+                  top: 30.0,
+                  left: 40.0,
+                  right: 40.0,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -125,9 +130,10 @@ class Details extends StatelessWidget {
                   Text(
                     "Descricao",
                     style: TextStyle(
-                        color: Colors.black54,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500),
+                      color: Colors.black54,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                   Text(
                     "30:00 min",

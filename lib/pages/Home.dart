@@ -86,7 +86,7 @@ class _HomeState extends State<Home> {
                 top: 40.0,
               ),
               decoration: const BoxDecoration(
-                color: Color(0xff161619),
+                color: Color(0xff1793A6),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(40.0),
                   topRight: Radius.circular(40.0),
@@ -209,42 +209,32 @@ class _HomeState extends State<Home> {
   Widget trilhas(DataTrilhas dataTrilhas) {
     return Container(
       margin: EdgeInsets.only(bottom: 35),
-      /*decoration: const BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(0, 1),
-            blurRadius: 2,
-            color: Colors.black,
-          ),
-        ],
-      ),*/
       child: Column(
-        //crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            //height: 250,
             margin: const EdgeInsets.only(
               left: 40.0,
               right: 40.0,
             ),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(50.0),
-                topRight: Radius.circular(50.0),
-              ),
+              borderRadius: BorderRadius.circular(20.0),
             ),
-            //color: Colors.white,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                SizedBox(
-                  //height: 150,
-                  child: Image.asset(
-                    dataTrilhas.image,
-                    //scale: 3,
+                ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(20.0),
+                    topRight: Radius.circular(20.0),
+                  ),
+                  child: SizedBox(
+                    width: double.infinity,
                     height: 150,
-                    fit: BoxFit.cover,
+                    child: Image.asset(
+                      dataTrilhas.image,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 Padding(
@@ -264,9 +254,10 @@ class _HomeState extends State<Home> {
                       Text(
                         dataTrilhas.description,
                         style: const TextStyle(
-                          fontSize: 15,
+                          fontSize: 18,
                           fontWeight: FontWeight.w400,
                         ),
+                        textAlign: TextAlign.justify,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -290,20 +281,28 @@ class _HomeState extends State<Home> {
                               color: Color(0xff1793A6),
                             ),
                           ),
-                          /*ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.black87,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                            ),
-                            child: Icon(
-                              Icons.play_arrow,
-                              color: Colors.white,
-                            ),
-                          )*/
                         ],
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            print("clicou na trilha ${dataTrilhas.title}");
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black87,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                          ),
+                          child: const Text(
+                            'Iniciar trilha',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
