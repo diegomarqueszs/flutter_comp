@@ -1,16 +1,9 @@
-# flutter_comp
+# Projeto para o processo seletivo 2023 da CompJunior
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Funcionalidades basicas:
+- Login
+- Detecção de erro em login
+- Cards selecionaveis
+- Carrossel
+- Lista de "videos"
+![comp](https://github.com/diegomarqueszs/flutter_comp/assets/90580148/d9adf355-7a58-42dc-b463-84c141263d12)
